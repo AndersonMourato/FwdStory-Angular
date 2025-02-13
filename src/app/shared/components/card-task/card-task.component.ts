@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-task',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './card-task.component.scss'
 })
 export class CardTaskComponent {
+
+  @Input() title!: string;
+  @Input() dateUpdate!: string;
+  @Input() textContent!: string;
 
 }

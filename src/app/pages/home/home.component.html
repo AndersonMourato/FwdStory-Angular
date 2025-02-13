@@ -1,6 +1,17 @@
-<mat-grid-list cols="6">
-    <mat-grid-tile></mat-grid-tile>
-    <mat-grid-tile [colspan]="5">
+<app-header></app-header>
+<div class="grid-container">
+    
+    <aside class="content">
+        <app-user-profile/>
+        <app-view-secondary/>
+    </aside>
+
+    <div class="content">
+        <app-metrics/>
         <app-priorities/>
-    </mat-grid-tile>  
-</mat-grid-list>
+        <app-accomplishments/>
+        <app-aspirations/>
+    </div>
+</div>
+
+<app-footer></app-footer>
