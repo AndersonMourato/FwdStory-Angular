@@ -15,4 +15,11 @@ export class UserProfileComponent {
   @Input() userName!: string;
   @Input() jobTitle!: string;
 
+  constructor() { 
+    this.srcImage = "/public/img/Profile.png";
+    this.altImage = "Profile image";
+    this.userName = "John Doe";
+    this.jobTitle = "Software Developer";
+  }
+
 }

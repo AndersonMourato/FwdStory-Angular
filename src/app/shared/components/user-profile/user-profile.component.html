@@ -1,17 +1,18 @@
 <section class="container">
     <div class="content">
         @if (userName) {
-
-            <div class="profile-avatar">
-                <img [src]="srcImage" [alt]="altImage" />
-            </div>
-            <div class="profile_info">
-                <h2>{{ userName }}</h2>
-                <p>{{ jobTitle }}</p>
+            <div class="profile-container">
+                <div class="profile-avatar">
+                    <img [src]="srcImage" [alt]="altImage"/>
+                </div>
+                <div class="profile_info">
+                    <span>{{ userName }}</span>
+                    <p>{{ jobTitle }}</p>
+                </div>
             </div>
         }@else{
             <div class="sing-in">
-                <span> faça login para acesar os recursos </span>
+                <span> Faça login para uma experiência completa. </span>
                 <button mat-raised-button color="primary" >Login</button>
             </div>
         }

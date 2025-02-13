@@ -2,4 +2,42 @@
     width: 100%;
     padding: 0.5rem 1.5rem;
     background-color: white;
+
+    .profile-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .profile-avatar{
+        max-width: 30px;
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    .profile_info{
+        width: 100%;
+        padding-left: 10px;
+
+        span{
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        p{
+            font-size: 0.7rem;
+            line-height: 0.7rem;
+        }
+    }
+
+    .sing-in{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        span{
+            margin-bottom: 5px;
+        }
+    }
 }

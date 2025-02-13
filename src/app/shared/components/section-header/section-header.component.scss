@@ -1,4 +1,17 @@
 .header {
   display: flex;
   justify-content: space-between;
+
+  span{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #5c5e60;
+  }
+
+  
 }
