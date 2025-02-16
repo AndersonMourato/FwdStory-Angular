@@ -1,3 +1,5 @@
+@import '../../../../_variables.scss';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -13,5 +15,9 @@
     color: #5c5e60;
   }
 
-  
+  .btn-custom{
+    background-color: $primary-color;
+    color: white;
+    border-radius: 5px;
+  }
 }

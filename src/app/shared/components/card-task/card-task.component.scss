@@ -1,3 +1,5 @@
+@import '../../../../_variables.scss';
+
 .tile-container{
     background-color: white;
     width: 100%;
@@ -20,7 +22,7 @@
         .title{
             font-size: 1rem;
             font-weight: 600;
-            color: #de3131;
+            color: $primary-color;
         }
 
         .date{
@@ -36,7 +38,7 @@
         position: absolute;
         bottom: 20px;
         font-size: 0.9rem;
-        color: #de3131;
+        color: $primary-color;
     }
 }
 .tile-container::before{

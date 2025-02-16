@@ -1,0 +1,33 @@
+@import '../../../../_variables.scss';
+
+
+section{
+    background-color: $primary-color;
+    width: 100%;
+    padding: 0.5rem 5rem;
+
+    .footer-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p{
+        margin: 0;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 300;
+
+        strong{
+            font-weight: 500;
+        }
+
+        .copyright{
+            overflow: visible;
+            display: inline-block;
+            font-size: 0.6rem;
+            width: auto;
+            height: auto;
+        }
+    }
+}
