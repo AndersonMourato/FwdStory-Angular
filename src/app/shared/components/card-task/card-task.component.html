@@ -1,12 +1,12 @@
 <section class="container">
     <div class="tile-container">
         <div class="tile-header">
-            <span class="title"> {{ title }} </span>
+            <span class="title" (click)="onClick()"> {{ title }} </span>
             <span class="date"> {{ dateUpdate }} </span>
         </div>
         <div class="text">
             <p> {{ textContent }} </p>
         </div>
-            <span class="read-more"> Read more </span>
+            <span class="read-more" (click)="onClick()"> Read more </span>
     </div>
 </section>

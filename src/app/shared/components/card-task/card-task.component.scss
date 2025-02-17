@@ -11,20 +11,21 @@
     max-height: 300px;
     min-height: 200px;
     overflow: hidden;
-
+    
     .tile-header{
         width: 100%;
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
         position: relative;
-
+        
         .title{
             font-size: 1rem;
             font-weight: 600;
             color: $primary-color;
+            cursor: pointer;
         }
-
+        
         .date{
             font-size: 0.8rem;
             color: #6c757d;
@@ -39,6 +40,7 @@
         bottom: 20px;
         font-size: 0.9rem;
         color: $primary-color;
+        cursor: pointer;
     }
 }
 .tile-container::before{
