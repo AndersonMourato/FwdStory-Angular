@@ -1,19 +1,20 @@
 <section>
     <div class="title-container">
-        <span class="title"> Priority </span>
-        <span class="date"> Updated: 2 days ago </span>
+        <span class="title"> Priority </span> 
+        <span class="date"> {{ dateUpdate | date: 'MMM d, y' : 'pt-BR' }} </span> 
     </div>
-    <form class="form-container">
+    <form [formGroup]="formModalGroup" class="form-container"> 
         <mat-form-field class="form-field">
             <mat-label>Priority Title</mat-label>
-            <input matInput >
+            <input matInput formControlName="title" aria-label="Priority Title"> 
         </mat-form-field>
-    
+        
         <mat-form-field class="form-field">
-            <mat-label>Priority Text</mat-label>
-            <textarea matInput ></textarea>
+            <mat-label>Priority Text</mat-label> 
+            <textarea matInput formControlName="textContent" aria-label="Priority Text"></textarea> 
         </mat-form-field>
-
-        <button class="btn-custom" mat-raised-button> Salvar </button>
+        
+        <p><mat-slide-toggle formControlName="concluded" aria-label="Concluded"> Concluded </mat-slide-toggle></p> 
+        <button class="btn-custom" mat-raised-button (click)="onSave()"> Salvar </button> 
     </form>
 </section>

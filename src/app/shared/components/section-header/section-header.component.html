@@ -3,5 +3,5 @@
         <span> {{ title }}</span>
         <p> {{ subtitle }} </p>
     </div>
-    <button class="btn-custom" mat-raised-button *ngIf="isButtonText"> {{ buttonText }} </button>
+    <button class="btn-custom" mat-raised-button *ngIf="isButtonText" (click)="onButtonClick()" > {{ buttonText }} </button>
 </div>

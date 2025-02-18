@@ -1,11 +1,11 @@
 <section class="container">
     <div class="tile-container">
         <div class="tile-header">
-            <span class="title" (click)="onClick()"> {{ title }} </span>
-            <span class="date"> {{ dateUpdate }} </span>
+            <span class="title" (click)="onClick()"> {{ priority.title }} </span>
+            <span class="date"> {{ priority.dateUpdate | date: 'MMM d, y' : 'pt-BR' }} </span>
         </div>
         <div class="text">
-            <p> {{ textContent }} </p>
+            <p> {{ priority.textContent }} </p>
         </div>
             <span class="read-more" (click)="onClick()"> Read more </span>
     </div>

@@ -1,32 +1,35 @@
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Component, Input, OnInit } from '@angular/core';
+import { IPriority } from '../../../core/models/priority.interface';
+import { PriorityService } from '../../../core/services/priority.service';
 import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-card-task',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './card-task.component.html',
   styleUrl: './card-task.component.scss'
 })
-export class CardTaskComponent implements OnInit {
+export class CardTaskComponent {
 
-  @Input() title!: string;
-  @Input() dateUpdate!: string;
-  @Input() textContent!: string;
+  @Input() priority!: IPriority;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, private priorityService: PriorityService) { }
 
   onClick() {
-    this.dialog.open(ModalComponent, {
+    const dialogRef = this.dialog.open(ModalComponent, {
       height: 'auto',
       width: 'auto',
+      data: this.priority,
     });
 
+    dialogRef.componentInstance.eventSave.subscribe((result: IPriority) => {
+      this.priority = result;
+      this.priorityService.updatePriority(result);
+    });
   }
 
-  ngOnInit() {
-    //this.onClick();
-  }
 
 }

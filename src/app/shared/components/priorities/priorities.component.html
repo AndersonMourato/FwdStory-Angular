@@ -6,37 +6,11 @@
     ></app-section-header>
 
     <div class="contents-tiles">
-
-        <app-card-task
-            title="Priority 1"
-            dateUpdate="Updated 2 days ago"
-            textContent="What I’m doing to make an impact"
-        ></app-card-task>
-        
-        <app-card-task
-            title="Priority 2"
-            dateUpdate="Updated 5 days ago"
-            textContent="What I’m doing to make an impact"
-        ></app-card-task>
-        
-        <app-card-task
-            title="Priority 1"
-            dateUpdate="Updated 2 days ago"
-            textContent="What I’m doing to make an impact"
-        ></app-card-task>
-        
-        <app-card-task
-            title="Priority 2"
-            dateUpdate="Updated 5 days ago"
-            textContent="What I’m doing to make an impact"
-        ></app-card-task>
-        <app-card-task
-            title="Priority 1"
-            dateUpdate="Updated 2 days ago"
-            textContent="What I’m doing to make an impact"
-        ></app-card-task>
-        
-        
+        <ng-container *ngFor="let priority of priorities" >
+            <app-card-task
+            [priority]="priority"
+            ></app-card-task>
+        </ng-container>        
     </div>
     
 </section>
